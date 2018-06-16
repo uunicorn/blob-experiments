@@ -1,0 +1,13 @@
+
+<script>
+
+var blob = new Blob(['1']);
+
+// loop takes a couple of seconds
+for(var i = 0;i<30;i++)
+    blob = new Blob([blob, blob]);
+
+// this one takes a lot more
+URL.createObjectURL(blob);
+
+</script>
