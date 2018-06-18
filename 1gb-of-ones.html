@@ -1,0 +1,14 @@
+
+<a download="test.txt" href="#">clickme</a>
+<script>
+
+var blob = new Blob(['1']);
+
+for(var i = 0;i<30;i++)
+    blob = new Blob([blob, blob]);
+
+var url = URL.createObjectURL(blob);
+
+document.getElementsByTagName('a')[0].setAttribute('href', url);
+
+</script>
